@@ -39,6 +39,17 @@ namespace AssemblyInfoCollecting
                 foreach (var item in types)
                 {
                     Console.WriteLine($"        {item.Name}");
+                    Console.WriteLine("            Methods:");
+                    foreach (var method in item.GetMethods(
+                        BindingFlags.Public |
+                        BindingFlags.NonPublic |
+                        BindingFlags.Instance |
+                        BindingFlags.Static |
+                        BindingFlags.DeclaredOnly
+                        ).Where(x => !x.IsSpecialName))
+                    {
+                        Console.WriteLine($"                {method.Name}");
+                    }
                 }
 
                 // Print assembly namespaces
