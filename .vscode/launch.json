@@ -12,6 +12,17 @@
         "stopAtEntry": false,
         "console": "internalConsole"
     },
+    {
+        "name": "Graphs",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build_Graphs",
+        "program": "${workspaceFolder}/Graphs/bin/Debug/net5.0/Graphs.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}/Graphs",
+        "stopAtEntry": false,
+        "console": "internalConsole"
+    },
         {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes

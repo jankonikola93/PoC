@@ -50,6 +50,18 @@ namespace AssemblyInfoCollecting
                     {
                         Console.WriteLine($"                {method.Name}");
                     }
+
+                    Console.WriteLine("            Fields:");
+                    foreach (var field in item.GetFields())
+                    {
+                        Console.WriteLine($"                {field.Name}");
+                    }
+
+                    Console.WriteLine("            Properties:");
+                    foreach (var property in item.GetProperties())
+                    {
+                        Console.WriteLine($"                {property.Name}");
+                    }
                 }
 
                 // Print assembly namespaces
