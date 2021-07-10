@@ -1,6 +1,26 @@
 {
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "GraphQL.NetCore.Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build_GraphQL.NetCore.Api",
+            "program": "${workspaceFolder}/GraphQL.NetCore.Api/bin/Debug/net5.0/GraphQL.NetCore.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GraphQL.NetCore.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/GraphQL.NetCore.Api/Views"
+            }
+        },
     {
         "name": "AssemblyInfoCollecting",
         "type": "coreclr",
