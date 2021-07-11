@@ -33,7 +33,9 @@ namespace GraphQL.NetCore.Api
         {
             services.AddDbContextPool<BookstoreDbContext>(options => options.UseSqlite("Data Source=bookstore.db"));
             services.AddGraphQLServer()
-                    .AddQueryType<BookQueries>();
+                    .AddQueryType<Query>()
+                        .AddTypeExtension<BookQueries>()
+                        .AddTypeExtension<AuthorQueries>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
