@@ -1,0 +1,15 @@
+{
+    "name": "inventory-connector", 
+    "config": {
+        "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector", 
+        "database.hostname": "sqlserver", 
+        "database.port": "1433", 
+        "database.user": "sa", 
+        "database.password": "Password!", 
+        "database.dbname": "test", 
+        "database.server.name": "dbs1", 
+        "table.include.list": "dbo.Inventory", 
+        "database.history.kafka.bootstrap.servers": "kafka:9092", 
+        "database.history.kafka.topic": "dbhistory.dbs1" 
+    }
+}
