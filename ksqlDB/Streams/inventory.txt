@@ -1,0 +1,4 @@
+CREATE STREAM inventory WITH (
+    kafka_topic = 'dbs1.dbo.Inventory',
+    value_format = 'avro'
+);
